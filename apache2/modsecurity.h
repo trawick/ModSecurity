@@ -58,6 +58,10 @@ typedef struct msc_parm msc_parm;
 #include "msc_lua.h"
 #endif
 
+/* httpd >= 2.4: Set module id for logging */
+#ifdef APLOG_USE_MODULE
+APLOG_USE_MODULE(security2);
+#endif
 
 #define PHASE_REQUEST_HEADERS       1
 #define PHASE_REQUEST_BODY          2
